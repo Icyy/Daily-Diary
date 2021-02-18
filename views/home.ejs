@@ -1,0 +1,19 @@
+<%- include('Partials/header') -%>
+
+<h1>HOME</h1>
+<p><%= homeStartingContent %></p>
+<% bodyarr.forEach(function(item){%>
+
+<h1><%= item.title%></h1>
+<p><%= item.post.substring(0,100) +"..."%> <a href="/posts/<%= item.title%>">Read More</a></p>
+
+
+<%})%>
+
+
+<form action="/compose">
+    <button class='add'><i class="fas fa-plus-circle fa-5x"></i></button>
+</form>
+
+
+<%- include('Partials/footer') -%>
